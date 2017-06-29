@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!--  uc强制竖屏
+     <meta name="screen-orientation" content="landscape">
+     &lt;!&ndash; QQ强制竖屏 &ndash;&gt;
+     <meta name="x5-orientation" content="landscape">
+     &lt;!&ndash; UC强制全屏 &ndash;&gt;
+     <meta name="full-screen" content="yes">
+     &lt;!&ndash; QQ强制全屏 &ndash;&gt;
+     <meta name="x5-fullscreen" content="true">-->
+    <title>萱萱 漫游童话</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        #music {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1;
+            -webkit-animation: cssAnimation 2s infinite ease;
+            -moz-animation: cssAnimation 2s infinite ease;
+            -o-animation: cssAnimation 2s infinite ease;
+        }
+        @-webkit-keyframes cssAnimation {
+            from {
+                -webkit-transform: rotate(360deg) ;
+            }
+            to {
+                -webkit-transform: rotate(0deg);
+            }
+        }
+
+        @-moz-keyframes cssAnimation {
+            from {
+                -moz-transform: rotate(360deg) ;
+            }
+            to {
+                -moz-transform: rotate(0deg);
+            }
+        }
+
+        @-o-keyframes cssAnimation {
+            from {
+                -o-transform: rotate(360deg);
+            }
+            to {
+                -o-transform: rotate(0deg);
+            }
+        }
+       #goBack{
+           position: absolute;
+           top: 20px;
+           left: 0px;
+           z-index: 1;
+           font-size:20px;
+           width:70px;
+           padding:5px 10px 5px 0px;
+           border:1px white solid;
+           border-radius:0 25px 25px 0;
+           line-height:1em;
+           color:white;
+           opacity: 0.3;
+           text-align:right;
+           background-color:#1E2C1E;
+       }
+
+    </style>
+
+</head>
+<body>
+<img id="music" src="img/music.png"/>
+<div id="goBack" onclick="goback()">◂返回</div>
+<audio src="music/29.WAV" loop autoplay>
+    Your browser does not support the audio element.
+</audio>
+
+<div id="container">
+</div>
+
+<!--<script src="js/jquery.min.js"></script>-->
+<script src="js/xuan.js"></script>
+<script src="js/constant.js"></script>
+<script src="js/tool.js"></script>
+<script src="js/template.js"></script>
+<script src="js/myScene.js"></script>
+<script src="js/firstScene.js"></script>
+<script src="js/secondScene.js"></script>
+<script src="js/thirdScene.js"></script>
+<script src="js/fourthScene.js"></script>
+<script src="js/fifthScene.js"></script>
+<script src="js/main.js"></script>
+<script>
+    /**
+     * 返回上一场景
+     */
+    function goback(){
+            stageBuiler.preScene();
+        }
+
+
+</script>
+</body>
+</html>
